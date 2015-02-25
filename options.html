@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><title>Replace URL Extension Options</title></head>
+<body onload="loadOptions()">
+
+Replace with: 
+  <input type="text" id="replace">
+</br>
+
+<label>
+  <input type="checkbox" id="com">
+  Replace ".com"
+  </br>
+  <input type="checkbox" id="ca">
+  Replace ".ca"
+  </br>
+  <input type="checkbox" id="org">
+  Replace ".org"
+  </br>
+</label>
+
+</br>
+
+<label>
+  <input type="checkbox" id="full">
+  Replace and remove original
+  </br>
+  </label>
+</br>
+<div id="status"></div>
+<button onclick="save_options()">Save</button>
+
+<script src="options.js"></script>
+</body>
+</html>
