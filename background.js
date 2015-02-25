@@ -1,13 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var queryInfo = {
-    active: true,
-    currentWindow: true
-  };
-
-    chrome.tabs.query(queryInfo, function(tabs) {
-
-    var tab = tabs[0];
-
+// Called when the user clicks on the browser action.
+chrome.browserAction.onClicked.addListener(function(tab) {
+  // No tabs or host permissions needed!
     var url = tab.url;
     
     var replaced_url = url.replace(".com", ".ezproxy.library.ubc.ca");
@@ -21,5 +14,4 @@ document.addEventListener('DOMContentLoaded', function() {
     console.assert(typeof url == 'string', 'tab.url should be a string');
 
     //callback(url); //Don't need to do this I think?
-  });
 });

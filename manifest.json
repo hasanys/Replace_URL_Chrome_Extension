@@ -2,12 +2,17 @@
   "manifest_version": 2,
 
   "name": "Replace URL",
-  "description": "This extension replaces '.com', '.org' and '.ca' with '.http://ezproxy.library.ubc.ca'",
+  "description": "This extension replaces '.com', '.org' and '.ca' with custom string",
   "version": "1.0",
-
+  "options_page": "options.html",
+  
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_title": "Replace URL"
+  },
+   "background": {
+    "scripts": ["background.js"],
+    "persistent": false
   },
   "permissions": [
     "activeTab",
