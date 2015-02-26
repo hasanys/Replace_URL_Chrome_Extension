@@ -5,7 +5,6 @@ function save_options() {
   var ca_checked = document.getElementById('ca').checked;
   var org_checked = document.getElementById('org').checked;
   var replace_checked = document.getElementById('full').checked;
-
   chrome.storage.sync.set({
     replaceText: text,
     comChecked: com_checked,
@@ -24,10 +23,10 @@ function save_options() {
 
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
-function loadOptions() {
+function restore_options() {
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
-    replaceText: "text",
+    replaceText: ".ezproxy.library.ubc.ca",
     comChecked: true,
     caChecked: true,
     orgChecked: true,
@@ -38,8 +37,8 @@ function loadOptions() {
     document.getElementById('ca').checked = items.caChecked;
     document.getElementById('org').checked = items.orgChecked;
     document.getElementById('full').checked = items.replaceChecked;
-
   });
 }
-//document.addEventListener('DOMContentLoaded', restore_options);
-//document.getElementById('save').addEventListener('click', save_options);
+
+document.addEventListener('DOMContentLoaded', restore_options);
+document.getElementById('save').addEventListener('click', save_options);

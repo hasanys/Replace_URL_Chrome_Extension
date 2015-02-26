@@ -5,6 +5,8 @@
   "description": "This extension replaces '.com', '.org' and '.ca' with a custom string",
   "version": "1.0",
   "icons": { "48": "icon_48.png", "128" : "icon_128.png"},
+  "options_page": "options.html", //For backwards support, no longer used in Chrome v40+
+  "permissions": ["storage"],
 
   "options_ui": {
     "page": "options.html",
@@ -17,9 +19,5 @@
    "background": {
     "scripts": ["background.js"],
     "persistent": false
-  },
-  "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
-  ]
+  }
 }

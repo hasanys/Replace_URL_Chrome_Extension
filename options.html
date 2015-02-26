@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head><title>Replace URL Extension Options</title></head>
-<body onload="loadOptions()">
+<head>
+	<title>Replace URL Extension Options</title>
+  <style>
+    body: { padding: 10px; }
+  </style>
+</head>
 
-Replace with: 
+<body>
+  Replace with: 
   <input type="text" id="replace">
 </br>
+
 
 <label>
   <input type="checkbox" id="com">
@@ -23,13 +29,14 @@ Replace with:
 
 <label>
   <input type="checkbox" id="full">
-  Replace and remove original
+  Replace AND remove original string
   </br>
   </label>
 </br>
-<div id="status"></div>
-<button onclick="save_options()">Save</button>
 
-<script src="options.js"></script>
+  <div id="status"></div>
+  <button id="save">Save</button>
+
+  <script src="options.js"></script>
 </body>
 </html>
